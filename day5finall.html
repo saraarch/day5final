@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my file</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <script>
+        // this is single script
+        var hello = "my first file!";
+        console.log(hello);
+        // Print odd numbers in an array
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const odds = arr.filter(number => {
+  return number % 2 !== 0;
+});
+
+console.log(odds);
+// arrow function
+// odd
+let nums = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+// let oddnums = arr.filter(n => n%2)
+
+// console.log(oddnums)
+// //##########
+// //odd numbers in iffe
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// (function(){
+// var array= []
+//     for(i=0;i<arr.length;i++)
+//     {
+//         if(arr[i] % 2 !== 0){
+//        array.push(arr[i])
+//         }
+          
+        
+//     }
+//     console.log(array)
+// })()
+
+// //######
+// //title case arrow 
+// function titleCase(str) {
+//   return str.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase());
+// }
+// console.log(titleCase('saranya devi'));
+// //######
+// //sum function iffe
+// var arrayy = [1, 2, 3, 4];
+// console.log(function(array)
+// {
+// var sum = 0;
+
+// for (let i = 0; i < arrayy.length; i++) {
+//     sum += arrayy[i];
+// }
+// return(sum);
+// }(arrayy));
+
+// //########
+// //sum arrow
+// const sum = [1, 2, 3].reduce((b, a) => b + a, 0);
+// console.log(sum);
+// //########
+
+// //palindrome arrow
+// const array = ['carecar', 1344, 12321, 'did', 'cannot','pop'];
+// const isPalindrome = el => {
+//    const str = String(el);
+//    let i = 0;
+//    let j = str.length - 1;
+//    while(i < j) {
+//       if(str[i] === str[j]) {
+//          i++;
+//          j--;
+//       }
+//       else {
+//          return false;
+//       }
+//    }
+//    return true;
+// };
+// const findPalindrome = arr => {
+//    return array.filter(el => isPalindrome(el));
+// };
+// console.log(findPalindrome(array));
+// //########
+// //palindrome  iffe function
+// var x = ["carecar","12321","did"];
+
+// console.log(function(x) {
+    
+//     var result =[];
+//     for (i=0;i<x.length;i++){
+//         var s=x[i];
+//         var temp = x[i].split("");
+//         temp=temp.reverse();
+//         temp=temp.join("");
+//         if(s===temp){
+//             result.push(x[i]);}
+//         }
+//     return result.join(" ")
+// }(x));
+
+
+// median iffe function
+var arr1=[1,2,3,4,5,16];
+var arr2=[7,8,9,10,11]
+console.log(function (arr1,arr2){
+    
+    var arr3=[...arr1,...arr2];
+    
+    arr3.sort(function(a, b){return a-b})
+    console.log(arr3);
+    if(arr3.length%2==0){
+        return arr3[arr3.length/2]+arr3[arr3.length/2-1];
+    }
+    else
+        return arr3[Math.floor(arr3.length/2)];
+    
+}(arr1,arr2));
+// reference
+// function expression
+// let x = function(x, y) {
+//    return x * y;
+// }
+// // using arrow functions
+// let x = (x, y) => x * y;
+
+var arr1=[1,2,3,4,5,16]; 
+var arr2=[7,8,9,10,11,12]
+
+console.log(function (arr1,arr2){
+    
+    var arr3=[...arr1,...arr2];
+    
+    arr3.sort(function(a, b){return a-b})
+    console.log(arr3);
+    if(arr3.length%2==0){
+        return arr3[arr3.length/2]+arr3[arr3.length/2-1];
+    }
+    else
+        return arr3[Math.floor(arr3.length/2)];
+    
+}(arr1,arr2));
+
+
+// Remove duplicates from an array
+
+var arr2=[1,3,3,6,5,6];  
+
+
+console.log(function (arr2){
+    
+    var temp=[];
+    
+    
+    for(i=0;i<arr2.length;i++){
+       
+        var flag=true;
+        for(j=i+1;j<arr2.length;j++){
+            if(arr2[i]==arr2[j]){
+                flag=false;
+                break;
+            }
+        }
+        
+        if(flag==true){
+            temp.push(arr2[i])
+        }
+        
+        
+    }
+    
+    return temp.join(" ")
+    
+}(arr2));
+//rotate k
+var arrr=[1,2,3,4,5,6];   
+var k=2;
+
+
+console.log(function (arrr,k){
+    
+    var temp=[];
+    
+    for(i=arrr.length-k;i<arrr.length;i++)
+        temp.push(arrr[i])
+        
+    for (i=0;i<arrr.length-k;i++)
+        temp.push(arrr[i])
+        
+    return temp.join(" ")
+    
+}(arrr,k));
+//arrow function prime num
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numArray = numArray.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
+//prime function
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function isPrime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log( numArray.filter(isPrime))
+// second link
+//#### addfive
+var num = 10;
+function addFive(num) { return num+5; }
+console.log(addFive(num))
+// ####Get opposite func
+var num1 = "5a";
+function getOpposite(num1) {
+if(Number.isInteger(num1)){return num1*(-1)}
+else{return -1}
+}
+console.log( getOpposite(num1))
+// ###minutes to seconds
+var min = 5;
+function toSeconds(min) {return min*60;}
+console.log(toSeconds(min))
+// ########string to integer
+var printnum = "5";
+function toInteger(printnum ) {return parseInt(printnum );}
+console.log(toInteger(printnum ))
+// ####Next num
+var number = 0;
+function nextNumber(number) {return number+1;}
+console.log(nextNumber(number))
+// ####Get first element
+array = [80, 5, 100];
+function getfirstelement(array){return array[0]}
+console.log(getfirstelement(array))
+// ####hours to seconds
+var hour = 2
+function hourstosec(hour){return hour*3600}
+console.log(hourstosec(hour))
+// loop method
+var arrr = [1, 2, 3];function hourToSeconds(arrr) {
+for(i=0;i<arrr.length;i++){
+arrr[i] = 3600*arrr[i];
+}
+return arrr
+}
+console.log(hourToSeconds(arr))
+// #### find perimeter
+var num1
+function findPerimeter(numb1,numb2){return numb1*numb2}
+console.log(findPerimeter(6,7));
+// ######boolean func
+function lessThan100(n1,n2)
+{
+if(n1+n2 < 100){return true}
+else{return false}}
+console.log(lessThan100(22,78))
+// count legs
+function Countlegs(tur,horse,pigs) {
+var a = 2*tur;
+var b = 4*(horse+pigs);
+return a+b
+}
+console.log(Countlegs(2,3,5))
+// number divisible by 5
+function numDiv (number)
+{
+    if (number%5==0){
+        return true
+    }else{return false}}
+    console.log (numDiv(43))
+    // check num is even
+    function isEven(num){
+if(parseInt(num)==num){
+if(num%2===0){return true}
+else{return false}
+}
+else{return -1} 
+}
+console.log(isEven(5))
+// check odd
+function areBothOdd(num1, num2){
+ if((num1%2!=0)&&(num2%2!=0)){return true}
+ else{return false}
+}
+console.log(areBothOdd(1,3))
+// return full name
+function getFullName(firstName, lastName){
+ if((firstName!='')&&(lastName!='')){return firstName + ' ' + lastName}
+ else{return firstName + lastName}
+}
+console.log(getFullName("guvi","geek"));
+// length of string
+// function getLength(a){
+//  if(typeOf(a)==string){return a.length}
+//  else{return -1}
+// }
+// console.log(getLength("guvi"));
+function getDistance(x1, y1, x2, y2)
+{
+var d1 = (x1-x2)*(x1-x2);d2=(y1-y2)*(y1-y2);
+return d1+d2
+}
+console.log(getDistance(100, 100, 400, 300));
+
+
+    
+    
+    </script>
+    
+</body>
+</html>
